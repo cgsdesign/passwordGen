@@ -11,11 +11,9 @@ For this project I worked primarily in Javasript to create a functional password
 
 
 
-<<<<<<< HEAD
-![Password Generator](assets/images/screenshotPasswordGenerator.png)
-=======
+
 ![Password Generator](./assets/Images/screenshotPasswordGenerator.png)
->>>>>>> 4a81069ca79e0be158a2904b07ac7c5de32ee0bb
+
 
 ## Credits
 ​
