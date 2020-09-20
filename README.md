@@ -5,8 +5,8 @@ For this project I worked primarily in Javasript to create a functional password
 ## Key Features
 * Clean CSS matching brand orange
 * Multiple variable prompt inputs linked to generate single output
-* lowercase letters, uppercase letters, numbers, and symbols available to chose from 
-* Wide range of password length available: 8-128 characters
+* Lowercase letters, uppercase letters, numbers, and symbols available to chose from 
+* Wide range of password lengths available: 8-128 characters
 * Inclusion of multiple levels of shuffling to better ensure password security
 
 
@@ -15,8 +15,8 @@ For this project I worked primarily in Javasript to create a functional password
 
 ## Credits
 ​
-Base code curtasy of uwisconsin_coding_bootcamp
-Fisher-Yates code curtasy of https://www.tutorialspoint.com/what-is-fisher-yates-shuffle-in-javascript
+* Base code curtasy of uwisconsin_coding_bootcamp
+* Fisher-Yates code curtasy of https://www.tutorialspoint.com/what-is-fisher-yates-shuffle-in-javascript
 ​
 ## Licence 
 
