@@ -102,7 +102,7 @@ var FisherYates = function(fill) {
   var i = fill.length, k , temp;      
   while(--i > 0){
      k = Math.floor(Math.random() * (i+1));
-     temp = fill[k]; //swap out variables as run them through randomizer in k
+     temp = fill[k]; //swaps out variables as run them through randomizer in k
      fill[k] = fill[i];
      fill[i] = temp;
   }
@@ -114,42 +114,42 @@ var generatePassword = function (){
 
   var options = getOptions();
   
-  var result=[];
-  var possibleChar=[];
-  var gutanteeChar=[];
+  var result=[]; //final password before final shuffling
+  var possibleChar=[]; // all posible characters selected
+  var garenteedChar=[]; //where garenteed characters go
 
   if(options.lowerConfirm){
     possibleChar=[...possibleChar,...lowerLetter];
-    gutanteeChar.push(random(lowerLetter)) //sets aside one character
+    garenteedChar.push(random(lowerLetter)) //sets aside one character
   }
 
   if(options.upperConfirm){
     possibleChar=[...possibleChar,...upperLetter];
-    gutanteeChar.push(random(upperLetter)) //sets aside one character
+    garenteedChar.push(random(upperLetter)) //sets aside one character
   }
 
   if(options.numConfirm){
-    possibleChar=[possibleChar,...num];
-    gutanteeChar.push(random(num)) //sets aside one character
+    possibleChar=[...possibleChar,...num];
+    garenteedChar.push(random(num)) //sets aside one character
   }
 
   if(options.symConfirm){
-    possibleChar=[possibleChar,...sym];
-    gutanteeChar.push(random(sym)) //sets aside one character
+    possibleChar=[...possibleChar,...sym];
+    garenteedChar.push(random(sym)) //sets aside one character
   }
   // This creates a password using the character types selected at the correct length.
   for (let i = 0; i < options.passwordLength; i++) {
     var possibleCharacters = random(possibleChar)
-    //Bellow "pushes" the possible characters that have been replaced/filled content wise with random possibleChar into the result aray
+    //Bellow "pushes" the now randomized possibleChar or the right length into the result
     result.push(possibleCharacters);
 
   }
 
-  console.log(gutanteeChar)
+  console.log(garenteedChar)
   console.log(result)
  //!!!! This causes the result array to be overwritten by the garanteeChar aray at the beginning. This makes the first characters the garenteed character that were pulled earlier withe the 'push' comand.
-  for (let i = 0; i < gutanteeChar.length; i++) {
-      result[i] = gutanteeChar[i];
+  for (let i = 0; i < garenteedChar.length; i++) {
+      result[i] = garenteedChar[i];
   }
 
 result= FisherYates(result) //[i] not needed
