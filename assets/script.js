@@ -2,8 +2,8 @@
 // Make variables
 // Create function to get random variable of each variable type
 // Get User Information (say no to none)
-// Create function to determin number of each variable type per user info
-// Create function to make correct number of each
+//Create function to combine option
+// Create function to pull out onr of each chosen
 // Create function to merge variable types back together
 // Cerate function to shuffle made variables
 // Create print to #password
@@ -17,33 +17,38 @@ var lowerLetter = [ 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l',
  'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'
 ]
 
-var Sym = [ "!", "@", "#", "$", "%", "^", "&", "*", "(", ')', '_', '-', '+', '=', 
-'{', '}', '[', ']', '\\', '|', ';', ':', '"', "'", ':', ';', '<', '>', ',', '.', '/', '?' 
+var sym = [ "!", "@", "#", "$", "%", "^", "&", "*", "(", ')', '_', '-', '+', '=', 
+'{', '}', '[', ']', '|', ';', ':', '"', "'", ':', ';', '<', '>', ',', '.', '/', '?' 
 ]
 
-var Num = [ '1', '2', '3', '4', '5', '6', '7', '8', '9', '0'
+var num = [ '1', '2', '3', '4', '5', '6', '7', '8', '9', '0'
 ]
 
-//answering
-var generatePassword = function (){
+//Helpful  way to concat with more than 2 arrays
+//var combineLowerUpperNum = [...lowerLetter,...upperLetter,...num]
+//var combineLowerUpper = [...lowerLetter, ...upperLetter]
+//var combineLowerUpperSym = [...lowerLetter,...upperLetter]
 
+
+
+
+function getOptions(){
   var passwordLength = parseInt(
     window.prompt("How many characters for your password? (Password MUST be between 8 and 128 characters")
     )
         if (isNaN(passwordLength) === true){ 
           alert("That is not a number. Please try again.")
-            return
+            return;
         }
         if (passwordLength <8 || passwordLength >128){
         
           alert("That is not a number between 8 and 128. Please try again.") 
-            return
+            return;
         } 
         else {
           alert("Now pick your character types.")
         }
 
-//______________________________WHY DOES THE RETURN ONLY WORK IF THE PASSWORDLENGTH IS FIRST?
     //lowercase
     var lowerConfirm = window.confirm("Click OK to include lowercase letters.");
         console.log ("lower letters " + lowerConfirm);
@@ -68,7 +73,6 @@ var generatePassword = function (){
         //if (symConfirm === true) {
         //  console.log ("include symbols " + symConfirm);
         //}
-
     //special character
     var symConfirm = window.confirm("Click OK to include symbols.");
         console.log ("symbol confirm  " + symConfirm);
@@ -89,38 +93,80 @@ var generatePassword = function (){
       console.log("variables acounted for")
 
       var PasswordVariables = {
-        lowerConfirm: (lowerConfirm),
-        upperConfirm: (upperConfirm),
-        numConfirm: (numConfirm),
-        symConfirm: (symConfirm),
-        passwordLength: (passwordLength)
+        lowerConfirm: lowerConfirm,
+        upperConfirm: upperConfirm,
+        numConfirm: numConfirm,
+        symConfirm: symConfirm,
+        passwordLength: passwordLength
 
     }
-    console.log((PasswordVariables))
+
+    return PasswordVariables;
+}
+//This makes random aply to the letters/characters rather than just math. 
+//IE. array length * random number below 1 (to the whole number) tells us which character to pull based on the array element position in the array [index]
+function random(arrFiller){
+  var index = Math.floor(Math.random() * arrFiller.length);
+  var randomized = arrFiller[index];
+  return randomized;
+}
+
+//answering
+var generatePassword = function (){
+
+  var options = getOptions();
+  
+  var result=[];
+  var possibleChar=[];
+  var gutanteeChar=[];
+
+  if(options.lowerConfirm){
+    possibleChar=possibleChar.concat(lowerLetter);
+    gutanteeChar.push(random(lowerLetter))
+  }
+
+  if(options.upperConfirm){
+    possibleChar=possibleChar.concat(upperLetter);
+    gutanteeChar.push(random(upperLetter))
+  }
+
+  if(options.numConfirm){
+    possibleChar=possibleChar.concat(num);
+    gutanteeChar.push(random(num))
+  }
+
+  if(options.symConfirm){
+    possibleChar=possibleChar.concat(sym);
+    gutanteeChar.push(random(sym))
+  }
+// This creates a password using the character types selected at the correct length.
+
+  for (let i = 0; i < options.passwordLength; i++) {
+    var possibleCharacters = random(possibleChar)
+    //Bellow "pushes" the possible characters that have been replaced/filled content wise with random possibleChar into the result aray
+    result.push(possibleCharacters);
+
+  }
+
+  console.log(gutanteeChar)
+  console.log(result)
+ //!!!! This causes the result array to beoverwritten by the garanteeChar aray at the beginning. This makes the first characters the garenteed character that were pulled earlier withe the 'push' comand.
+  for (let i = 0; i < gutanteeChar.length; i++) {
+      result[i] = gutanteeChar[i];
+
+  }
+//console.log(result)
+
+
+  //console.log(result);
+  return result.join("")
+
   }
     
 
      
  
-
-      
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+//given
 // Get references to the #generate element
 var generateBtn = document.querySelector("#generate");
 
