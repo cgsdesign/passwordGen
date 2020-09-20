@@ -46,21 +46,21 @@ function getOptions(){
 
     //lowercase
     var lowerConfirm = window.confirm("Click OK to include lowercase letters.");
-        console.log ("lower letters " + lowerConfirm); //sets aside one character
+        console.log ("lower letters " + lowerConfirm); 
 
 
     //uppercase
     var upperConfirm = window.confirm("Click OK to include uppercase letters.");
-      console.log ("upper letters " + upperConfirm); //sets aside one character
+      console.log ("upper letters " + upperConfirm); 
 
 
     //number
     var numConfirm = window.confirm("Click OK to include numbers.");
-        console.log ("number confirm " + numConfirm); //sets aside one character
+        console.log ("number confirm " + numConfirm); 
 
     //special character
     var symConfirm = window.confirm("Click OK to include symbols.");
-        console.log ("symbol confirm  " + symConfirm); //sets aside one character
+        console.log ("symbol confirm  " + symConfirm); 
 
 
     // main object ^.^
@@ -120,22 +120,22 @@ var generatePassword = function (){
 
   if(options.lowerConfirm){
     possibleChar=[...possibleChar,...lowerLetter];
-    gutanteeChar.push(random(lowerLetter))
+    gutanteeChar.push(random(lowerLetter)) //sets aside one character
   }
 
   if(options.upperConfirm){
     possibleChar=[...possibleChar,...upperLetter];
-    gutanteeChar.push(random(upperLetter))
+    gutanteeChar.push(random(upperLetter)) //sets aside one character
   }
 
   if(options.numConfirm){
     possibleChar=[possibleChar,...num];
-    gutanteeChar.push(random(num))
+    gutanteeChar.push(random(num)) //sets aside one character
   }
 
   if(options.symConfirm){
     possibleChar=[possibleChar,...sym];
-    gutanteeChar.push(random(sym))
+    gutanteeChar.push(random(sym)) //sets aside one character
   }
   // This creates a password using the character types selected at the correct length.
   for (let i = 0; i < options.passwordLength; i++) {
