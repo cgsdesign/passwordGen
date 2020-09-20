@@ -2,8 +2,8 @@
 // Make variables
 // Create function to get random variable of each variable type
 // Get User Information (say no to none)
-//Create function to combine option
-// Create function to pull out onr of each chosen
+// Create function to pull out one of each chosen
+// Create function to combine options
 // Create function to merge variable types back together
 // Cerate function to shuffle made variables
 // Create print to #password

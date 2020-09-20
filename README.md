@@ -1,17 +1,14 @@
 ### Live site at [Password Generator](https://cgsdesign.github.io/passwordGen/.)
 ​
-​For this project I took the pre-existing webpage for Horiseon and optimized it for greater accessibility. The original website though functional, lacked alt atributes, proper HTML elements, or a descriptive page title. It also lacked internal documentation and had repetative classes and a lack of organization. The final page shown here, now is optomized for maximum accesability with increased SEO. All files include relevant internal documentation, logical CSS orginazation, optimal use of HTML5 Elements, and clear, consolidated, classes.
-​For this project I took the pre-existing webpage for Horiseon and optimized it for greater accessibility. The original website though functional, lacked alt attributes, proper HTML elements, or a descriptive page title. It also lacked internal documentation and had repetitive classes and a lack of organization. The final page shown here, now is optimized for maximum accessibility with increased SEO. All files include relevant internal documentation, logical CSS organization, optimal use of HTML5 Elements, and clear, consolidated, classes.
+For this project I worked primarily in Javasript to create a functional password generator. The given generator allows for various input types: uppercase letters, lowercase letters, numbers, and symbols. It also allows for password length between 8 and 128 characters. It relies on clear prompts to gain user input criteria.
 ​
 ## Key Features
-* image alt atributes
-* organized CSS by page flow
-* concise CSS
-* clear internal documentation
-* simatic HTML5 elements
-* title is clear and consise
-* semantic HTML5 elements
-* title is clear and concise
+* Clean CSS matching brand orange
+* Multiple variable prompt inputs linked to generate single output
+* lowercase letters, uppercase letters, numbers, and symbols available to chose from 
+* Wide range of password length available: 8-128 characters
+* Inclusion of multiple levels of shuffling to better ensure password security
+
 
 
 ![Password Generator](assets/images/HoriseonServicesMockup.png)
