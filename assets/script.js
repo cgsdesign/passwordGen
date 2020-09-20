@@ -24,14 +24,9 @@ var sym = [ "!", "@", "#", "$", "%", "^", "&", "*", "(", ')', '_', '-', '+', '='
 var num = [ '1', '2', '3', '4', '5', '6', '7', '8', '9', '0'
 ]
 
-//Helpful  way to concat with more than 2 arrays
-//var combineLowerUpperNum = [...lowerLetter,...upperLetter,...num]
-//var combineLowerUpper = [...lowerLetter, ...upperLetter]
-//var combineLowerUpperSym = [...lowerLetter,...upperLetter]
 
 
-
-
+//asking for what kind of password the user wants
 function getOptions(){
   var passwordLength = parseInt(
     window.prompt("How many characters for your password? (Password MUST be between 8 and 128 characters")
@@ -53,34 +48,25 @@ function getOptions(){
     var lowerConfirm = window.confirm("Click OK to include lowercase letters.");
         console.log ("lower letters " + lowerConfirm);
 
-      //  if (symConfirm === true) {
-      //    console.log ("include symbols " + symConfirm);
-      //  }
+
 
     //uppercase
     var upperConfirm = window.confirm("Click OK to include uppercase letters.");
       console.log ("upper letters " + upperConfirm);
 
-      //if (symConfirm === true) {
-      //  console.log ("include symbols " + symConfirm);
-      //}
+
 
 
     //number
     var numConfirm = window.confirm("Click OK to include numbers.");
         console.log ("number confirm " + numConfirm);
 
-        //if (symConfirm === true) {
-        //  console.log ("include symbols " + symConfirm);
-        //}
     //special character
     var symConfirm = window.confirm("Click OK to include symbols.");
         console.log ("symbol confirm  " + symConfirm);
 
-        //if (symConfirm === true) {
-        //  console.log ("include symbols " + symConfirm);
-        //}
 
+    // main object ^.^
     if (
         lowerConfirm === false &&
         upperConfirm === false &&
@@ -103,17 +89,19 @@ function getOptions(){
 
     return PasswordVariables;
 }
-//This makes random aply to the letters/characters rather than just math. 
-//IE. array length * random number below 1 (to the whole number) tells us which character to pull based on the array element position in the array [index]
+
+//randomizer
 function random(arrFiller){
   var index = Math.floor(Math.random() * arrFiller.length);
   var randomized = arrFiller[index];
   return randomized;
 }
 
+
+//cool code for shuffling- has neet history! 
 var FisherYates = function(fill) {  
   var fill = fill
-  var i = fill.length, k , temp;      // k is to generate random index and temp is to swap the values
+  var i = fill.length, k , temp;      
   while(--i > 0){
      k = Math.floor(Math.random() * (i+1));
      temp = fill[k];
@@ -122,7 +110,6 @@ var FisherYates = function(fill) {
   }
 return fill
 }
-
 
 //answering
 var generatePassword = function (){
@@ -168,25 +155,16 @@ var generatePassword = function (){
       result[i] = gutanteeChar[i];
 
   }
-//console.log(result)
-// shuffle final code so first three are not at start
- // var shuffle = function(result) 
-  //{ _.shuffle(result[i])}
-  //shuffle()
 
 result= FisherYates(result)
    
 
-
   //console.log(result);
   return result.join("")
-
-  }
+}
     
 
-     
- 
-//given
+//given code
 // Get references to the #generate element
 var generateBtn = document.querySelector("#generate");
 
