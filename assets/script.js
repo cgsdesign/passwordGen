@@ -46,24 +46,21 @@ function getOptions(){
 
     //lowercase
     var lowerConfirm = window.confirm("Click OK to include lowercase letters.");
-        console.log ("lower letters " + lowerConfirm);
-
+        console.log ("lower letters " + lowerConfirm); //sets aside one character
 
 
     //uppercase
     var upperConfirm = window.confirm("Click OK to include uppercase letters.");
-      console.log ("upper letters " + upperConfirm);
-
-
+      console.log ("upper letters " + upperConfirm); //sets aside one character
 
 
     //number
     var numConfirm = window.confirm("Click OK to include numbers.");
-        console.log ("number confirm " + numConfirm);
+        console.log ("number confirm " + numConfirm); //sets aside one character
 
     //special character
     var symConfirm = window.confirm("Click OK to include symbols.");
-        console.log ("symbol confirm  " + symConfirm);
+        console.log ("symbol confirm  " + symConfirm); //sets aside one character
 
 
     // main object ^.^
@@ -98,14 +95,14 @@ function random(arrFiller){
 }
 
 
-//cool code for shuffling- has neet history! 
+//cool code for shuffling - has neet history! 
 // check out the history from https://en.wikipedia.org/wiki/Fisher%E2%80%93Yates_shuffle
 var FisherYates = function(fill) {  
   var fill = fill
   var i = fill.length, k , temp;      
   while(--i > 0){
      k = Math.floor(Math.random() * (i+1));
-     temp = fill[k];
+     temp = fill[k]; //swap out variables as run them through randomizer in k
      fill[k] = fill[i];
      fill[i] = temp;
   }
@@ -154,7 +151,6 @@ var generatePassword = function (){
  //!!!! This causes the result array to beoverwritten by the garanteeChar aray at the beginning. This makes the first characters the garenteed character that were pulled earlier withe the 'push' comand.
   for (let i = 0; i < gutanteeChar.length; i++) {
       result[i] = gutanteeChar[i];
-
   }
 
 result= FisherYates(result)
