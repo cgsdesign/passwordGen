@@ -98,7 +98,7 @@ function random(arrFiller){
 //cool code for shuffling - has neet history! 
 // check out the history from https://en.wikipedia.org/wiki/Fisher%E2%80%93Yates_shuffle
 var FisherYates = function(fill) {  
-  var fill = fill
+  var fill = fill // important! remenber to keep track of fill consistency!
   var i = fill.length, k , temp;      
   while(--i > 0){
      k = Math.floor(Math.random() * (i+1));
@@ -137,8 +137,7 @@ var generatePassword = function (){
     possibleChar=[possibleChar,...sym];
     gutanteeChar.push(random(sym))
   }
-// This creates a password using the character types selected at the correct length.
-
+  // This creates a password using the character types selected at the correct length.
   for (let i = 0; i < options.passwordLength; i++) {
     var possibleCharacters = random(possibleChar)
     //Bellow "pushes" the possible characters that have been replaced/filled content wise with random possibleChar into the result aray
@@ -148,12 +147,12 @@ var generatePassword = function (){
 
   console.log(gutanteeChar)
   console.log(result)
- //!!!! This causes the result array to beoverwritten by the garanteeChar aray at the beginning. This makes the first characters the garenteed character that were pulled earlier withe the 'push' comand.
+ //!!!! This causes the result array to be overwritten by the garanteeChar aray at the beginning. This makes the first characters the garenteed character that were pulled earlier withe the 'push' comand.
   for (let i = 0; i < gutanteeChar.length; i++) {
       result[i] = gutanteeChar[i];
   }
 
-result= FisherYates(result)
+result= FisherYates(result) //[i] not needed
    
 
   //console.log(result);

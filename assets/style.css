@@ -120,7 +120,6 @@ button[disabled] {
   border-radius: 6px;
   resize: none;
   overflow: hidden;
-  color: #ff8d0a;
 }
 
 @media (max-width: 690px) {
