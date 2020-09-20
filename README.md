@@ -5,21 +5,25 @@ For this project I worked primarily in Javasript to create a functional password
 ## Key Features
 * Clean CSS matching brand orange
 * Multiple variable prompt inputs linked to generate single output
-* lowercase letters, uppercase letters, numbers, and symbols available to chose from 
-* Wide range of password length available: 8-128 characters
+* Lowercase letters, uppercase letters, numbers, and symbols available to chose from 
+* Wide range of password lengths available: 8-128 characters
 * Inclusion of multiple levels of shuffling to better ensure password security
 
 
 
+<<<<<<< HEAD
 ![Password Generator](assets/images/screenshotPasswordGenerator.png)
+=======
+![Password Generator](./assets/Images/screenshotPasswordGenerator.png)
+>>>>>>> 4a81069ca79e0be158a2904b07ac7c5de32ee0bb
 
 ## Credits
 ​
-Base code curtasy of uwisconsin_coding_bootcamp
-Fisher-Yates code curtasy of https://www.tutorialspoint.com/what-is-fisher-yates-shuffle-in-javascript
+* Base code curtasy of uwisconsin_coding_bootcamp
+* Fisher-Yates code curtasy of https://www.tutorialspoint.com/what-is-fisher-yates-shuffle-in-javascript
 ​
-​References: 
-​https://www.pluralsight.com/guides/semantic-html
+## Licence 
+
 @@ -41,4 +41,3 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
 AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
