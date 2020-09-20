@@ -111,6 +111,19 @@ function random(arrFiller){
   return randomized;
 }
 
+var FisherYates = function(fill) {  
+  var fill = fill
+  var i = fill.length, k , temp;      // k is to generate random index and temp is to swap the values
+  while(--i > 0){
+     k = Math.floor(Math.random() * (i+1));
+     temp = fill[k];
+     fill[k] = fill[i];
+     fill[i] = temp;
+  }
+return fill
+}
+
+
 //answering
 var generatePassword = function (){
 
@@ -156,6 +169,13 @@ var generatePassword = function (){
 
   }
 //console.log(result)
+// shuffle final code so first three are not at start
+ // var shuffle = function(result) 
+  //{ _.shuffle(result[i])}
+  //shuffle()
+
+result= FisherYates(result)
+   
 
 
   //console.log(result);
