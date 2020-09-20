@@ -121,22 +121,22 @@ var generatePassword = function (){
   var gutanteeChar=[];
 
   if(options.lowerConfirm){
-    possibleChar=possibleChar.concat(lowerLetter);
+    possibleChar=[...possibleChar,...lowerLetter];
     gutanteeChar.push(random(lowerLetter))
   }
 
   if(options.upperConfirm){
-    possibleChar=possibleChar.concat(upperLetter);
+    possibleChar=[...possibleChar,...upperLetter];
     gutanteeChar.push(random(upperLetter))
   }
 
   if(options.numConfirm){
-    possibleChar=possibleChar.concat(num);
+    possibleChar=[possibleChar,...num];
     gutanteeChar.push(random(num))
   }
 
   if(options.symConfirm){
-    possibleChar=possibleChar.concat(sym);
+    possibleChar=[possibleChar,...sym];
     gutanteeChar.push(random(sym))
   }
 // This creates a password using the character types selected at the correct length.
