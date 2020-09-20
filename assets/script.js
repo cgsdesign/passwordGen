@@ -99,6 +99,7 @@ function random(arrFiller){
 
 
 //cool code for shuffling- has neet history! 
+// check out the history from https://en.wikipedia.org/wiki/Fisher%E2%80%93Yates_shuffle
 var FisherYates = function(fill) {  
   var fill = fill
   var i = fill.length, k , temp;      
