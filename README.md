@@ -11,15 +11,15 @@ For this project I worked primarily in Javasript to create a functional password
 
 
 
-![Password Generator](assets/images/screenshotPasswordGenerator.png)
+![Password Generator](./assets/Images/screenshotPasswordGenerator.png)
 
 ## Credits
 ​
 Base code curtasy of uwisconsin_coding_bootcamp
 Fisher-Yates code curtasy of https://www.tutorialspoint.com/what-is-fisher-yates-shuffle-in-javascript
 ​
-​References: 
-​https://www.pluralsight.com/guides/semantic-html
+## Licence 
+
 @@ -41,4 +41,3 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
 AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
