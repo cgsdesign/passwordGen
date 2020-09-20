@@ -11,7 +11,7 @@ For this project I worked primarily in Javasript to create a functional password
 
 
 
-![Password Generator](assets/images/HoriseonServicesMockup.png)
+![Password Generator](assets/images/screenshotPassword.png)
 
 ## Credits
 ​
